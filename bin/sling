@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+# require 'hashslinger/slinger'
+
+if File.exists? "Vagrantfile"
+  puts "ya" # File.open("Vagrantfile")
+else
+  puts "Need a Vagrantfile"
+end

@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Hashslinger::VERSION
   spec.authors       = ["Keyvan Fatehi"]
   spec.email         = ["keyvanfatehi@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{slings hash}
+  spec.summary       = %q{slings hash}
   spec.homepage      = ""
   spec.license       = "MIT"
 
