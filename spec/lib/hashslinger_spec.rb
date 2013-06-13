@@ -24,10 +24,6 @@ describe Hashslinger do
       vm.should_receive(:provision).with(:hashslinger, kind_of(Hash))
     end
 
-    it "sends a shell script through" do
-
-    end
-
     after do
       config.vm.provision :hashslinger, on_first_up:{ echo: %{
         Your dev environment is almost ready. What remains:

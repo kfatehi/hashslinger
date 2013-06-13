@@ -27,7 +27,7 @@ module Hashslinger
     end 
     
     def echo text
-      text.split("\n").each do |line|
+      text.strip.split("\n").each do |line|
         line.split("\"")
         line = <<-SHELL
           echo "#{Shellwords.escape(line)}"
@@ -38,8 +38,8 @@ module Hashslinger
 
     def render
       self.shell_script.puts <<-SHELL
-        if [ ! -f /.DidntLearnPuppetOrChef//OnFirstUp ]; then
-          date > /.DidntLearnPuppetOrChef//OnFirstUp
+        if [ ! -f /.Hashslinger_OnFirstUp ]; then
+          date > /.Hashslinger_OnFirstUp
           #{@line_cache.join("\n")}
         fi
       SHELL
